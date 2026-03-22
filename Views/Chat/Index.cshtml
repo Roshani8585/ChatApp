@@ -1,0 +1,32 @@
+﻿<div style="display:flex; height:500px;">
+
+    <!-- LEFT SIDE USERS -->
+    <div style="width:30%; border-right:1px solid gray;">
+        <h3>Users</h3>
+        <ul id="userList"></ul>
+    </div>
+
+    <!-- RIGHT SIDE CHAT -->
+    <div style="width:70%; padding:10px;">
+        <h3 id="chatWith">Select User</h3>
+
+        <div id="chatBox" style="height:300px; overflow:auto; border:1px solid gray;"></div>
+
+        <input type="text" id="messageInput" placeholder="Type message" />
+        <button id="sendBtn" onclick="sendPrivate()" disabled>Send</button>
+
+        <br /><br />
+
+        <!-- Invite -->
+        <div>
+            <input type="text" id="inviteEmail" placeholder="Enter Email" />
+            <button onclick="inviteUser()">Invite</button>
+        </div>
+    </div>
+</div>
+
+<!-- ✅ SignalR -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+
+<!-- ✅ Your JS -->
+<script src="~/chat.js"></script>
